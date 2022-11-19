@@ -14,7 +14,8 @@ cursror = mysql.connect().cursor()
 @app.route('/')
 def index():
     cursror.execute("SHOW DATABASES")
-    return json.dumps(cursror.fetchall())  
+    data = cursror.fetchall()
+    return json.dumps(data)
 
 
 # запусти приложение на локальном сервере
