@@ -1,21 +1,11 @@
 {
-    "sqltools.connections": [
-        {
-            "mssqlOptions": {
-                "appName": "SQLTools",
-                "useUTC": true,
-                "encrypt": true,
-                "instanceName": "cars-inf"
-            },
-            "previewLimit": 50,
-            "server": "localhost",
-            "port": 1433,
-            "askForPassword": true,
-            "driver": "MSSQL",
-            "name": "Cars-conn",
-            "group": "cars-info",
-            "database": "cars",
-            "username": "19gamma"
-        }
-    ]
-}
+    "type": "mssql",
+    "host": "localhost",
+    "port": 1433,
+    "username": "19gamma",
+    "password": "123456",
+    "database": "cars-bd",
+    "synchronize": true,
+    "logging": false,
+
+ }
