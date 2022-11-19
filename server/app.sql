@@ -1,12 +1,12 @@
 
 CREATE TABLE user_data (
 id int NOT NULL AUTO_INCREMENT,
-PRIMARY KEY (id)
+PRIMARY KEY (id),
 number_user int,
-full_name_user varchar(64),
+full_name_user VARCHAR(64),
 password varchar(14),
-namber_of_the_car varchar(6),
-the_model_of_car varchar(14),
+number_of_the_car varchar(6),
+the_model_of_car varchar(14)
 );
 
 CREATE TABLE name_of_cars (
@@ -18,40 +18,12 @@ numbers int,
 nambers_VIN varchar(16),
 car_charging_speed int,
 engine_power int,
-charging_type varchar(10),
+charging_type varchar(10)
 );
 
-CREATE TABLE documents (
+CREATE TABLE documents_table (
 id int NOT NULL AUTO_INCREMENT,
 PRIMARY KEY (id),
-documents_name varchar(10),
-"document_photo?!"
-);
+documents_name varchar(10)
+); 
 
-CREATE TABLE types_of_charging (
-    id int NOT NULL AUTO_INCREMENT,
-    PRIMARY KEY (id),
-    name varchar(32)
-);
-
-CREATE TABLE companies (
-    id int NOT NULL AUTO_INCREMENT,
-    PRIMARY KEY (id),
-    name varchar(32)
-);
-
-CREATE TABLE charging_points (
-    id int NOT NULL AUTO_INCREMENT,
-    PRIMARY KEY (id),
-    adress varchar(132),
-    types_of_charging int,
-FOREIGN KEY (types_of_charging)
-REFERENCES types_of_charging (id),
-    coordinates varchar(132),
-    numbers_of_places int,
-    avalible_count int,
-    cost int,
-    company_of_charging_point int,
-FOREIGN KEY (company_of_charging_point)
-REFERENCES companies (id)
-);
