@@ -13,9 +13,8 @@ cursror = mysql.connect().cursor()
 
 @app.route('/')
 def index():
-    cursror.execute("SHOW DATABASES;")
-    return json.dumps(cursror.fetchall())
-    
+    cursror.execute("SHOW DATABASES")
+    return json.dumps(cursror.fetchall())  
 
 # запусти приложение на локальном сервере
 if __name__ == '__main__':
