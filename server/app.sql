@@ -1,3 +1,20 @@
+
+CREATE TABLE user_data (
+id int NOT NULL AUTO_INCREMENT,
+PRIMARY KEY (id)
+number_user int,
+full_name_user varchar(64),
+password varchar(14),
+namber_of_the_car varchar(6),
+the_model_of_car varchar(14),
+);
+
+CREATE TABLE name_of_cars (
+id int NOT NULL AUTO_INCREMENT,
+PRIMARY KEY (id),
+brand_of_cars varchar()
+);
+
 CREATE TABLE types_of_charging (
     id int NOT NULL AUTO_INCREMENT,
     PRIMARY KEY (id),
