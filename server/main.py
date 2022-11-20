@@ -16,6 +16,10 @@ mysql.init_app(app)
 
 cursror = mysql.connect().cursor()
 
+@app.route('/docs', methods=['GET'])
+def get_docs():
+    return send_file('docs.html')
+
 # создание пользователя
 @app.route('/create_user', methods=['POST'])
 def create_user():
